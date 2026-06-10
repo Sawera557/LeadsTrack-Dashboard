@@ -1108,6 +1108,12 @@ tr:last-child td{border-bottom:none}
 <script>
 const API_BASE = 'https://5000-10d627ea-3d59-4fc1-a555-5c12162efa94.daytonaproxy01.net';
 
+// SDR Configuration - Anna Jhonas
+const SDR_USER_ID = 3;
+const SDR_WORKSPACE_ID = 3;
+const SDR_NAME = 'Anna Jhonas';
+const SDR_EMAIL = 'anna.jhonas@myflashcloud.com';
+
 // SDR Configuration - Anna Fox
 const SDR_USER_ID = 2;
 const SDR_WORKSPACE_ID = 2;
@@ -1155,6 +1161,8 @@ function escapeHtml(s) { var d = document.createElement('div'); d.textContent = 
 function getHeaders() {
   var h = { 'Content-Type': 'application/json' };
   if (authToken) h['Authorization'] = 'Bearer ' + authToken;
+  h['X-User-ID'] = SDR_USER_ID;
+  h['X-Workspace-ID'] = SDR_WORKSPACE_ID;
   h['X-User-ID'] = SDR_USER_ID;
   h['X-Workspace-ID'] = SDR_WORKSPACE_ID;
   h['X-User-ID'] = SDR_USER_ID;
